@@ -996,7 +996,7 @@ footer {
 /*--------------------------------------------
 10. Typography
 ---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 { font-weight: normal; sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-weight: normal, sans-serif; }
 h1,h2 { font-family: 'Pacifico'; color: #d07837; }
 h3,h4 { font-family: 'Cabin'; font-weight: bold; }
 h1 {
