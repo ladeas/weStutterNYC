@@ -3,10 +3,10 @@
 			<!-- Start Navigation -->
 			<nav>
 				<ul>
-					<li><%= link_to_unless_current "home", root_path %></li>
-					<li><%= link_to_unless_current "about", about_path %></li>
+					<li><%= link_to "home", root_path %></li>
+					<li><%= link_to "about", about_path %></li>
 
-					<li><a href="blog.html">blog</a></li>
+					<li><%= link_to "blog", blog_path %></li>
 					<li><a href="events_list.html">events</a></li>
 					<li>
 						<a href="#">gallery</a>

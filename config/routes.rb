@@ -1,7 +1,18 @@
 WeStutterNYC::Application.routes.draw do
 
+  resources :users
+
   get 'about', to: "info#about"
   get 'contact', to: "info#contact"
+  get 'blog', to: "info#blog"
+  get 'donate', to: "info#donate"
+  get 'home', to: "info#home"
+  get 'events_list', to: "info#events_list"
+  get 'styles', to: "info#styles"
+  get 'licks/balls', to: "info#styles"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

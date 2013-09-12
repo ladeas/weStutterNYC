@@ -1,39 +1,50 @@
 <footer>
 		<div class="container">
 			<div class="widget one_fourth">
-				<h2 class="logo">Advocate</h2>
-				<p>This is a text widget, you can add anything you’d like to this area. Maybe  a little more info about your organization or perhaps even a bit of html.</p>
+				<h2 class="logo">We Stutter</h2>
+				<p>That's right , we stutter. There's really not much else to write in this section. We stutter and we like other people who stutter. That's pretty much it!</p>
 			</div>
 			<div class="widget one_fourth">
-				<h5>Twitter</h5>
+				<h5>NSA Twitter</h5>
 				
 				<div class="twitter_stream"></div>
 				
 			</div>
 			<div class="widget one_fourth">
 				<h5>Newsletter</h5>
-								
-				<form action="javascript:;" method="post">
-					
-					<p>Signup to receive breaking news.</p>
-					
+													
+					<p>Signup to receive our monthly recaps.</p>
+
+				<%= form_for :user, :url => users_path(@user), :html => {:method => :post} do |f| %>
+				<% @user = User.new %>
+				<% if @user.errors.any? %>
+				    <div id="error_explanation">
+				      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+				      <ul>
+				      <% @user.errors.full_messages.each do |msg| %>
+				        <li><%= msg %></li>
+				      <% end %>
+				      </ul>
+				    </div>
+				  <% end %>
 					<p>
-						<label for="name">Name *</label>
-						<input type="text" name="name" id="name" value="" />
+						<%= f.text_field :name, placeholder: 'Name *' %>
 					</p>
 					<p>
-						<label for="email">Email *</label>
-						<input type="text" name="email" id="email" value="" />
+						<%= f.email_field :email, placeholder: 'Email *' %>
 					</p>
-					<input type="submit" class="button white" value="Signup &#x2192;" />
-				</form>
+					
+					<%= f.submit 'Signup', class: "button white" %>
+				<% end %>
 			</div>
 			<div class="widget one_fourth column_last">
 				<h5>Location</h5>
 				<div class="location_widget">
 					<p>
-						1234 Revolutionary Drive <br/>
-						Miami, FL 33445
+						119 W. 40th Street <br/>
+						14th Floor <br/>
+						New York, NY 10018
 					</p>
 					<p>
 						<span class="icon general">r</span> 123.333.4524 <br/>
