@@ -1363,7 +1363,7 @@ input,textarea {
 	font-size: 13px;
 	outline: none;
 	-webkit-appearance: none;
-	-webkit-focus-ring-color: none
+	-webkit-focus-ring-color: none;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
