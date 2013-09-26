@@ -1,48 +1,54 @@
-<%= render 'menu' %>
+<!DOCTYPE html>
+<html lang="en">
 
-<%= render 'logo_container' %>
+<%= render 'menu' %>
+	
+	<section class="page_heading">
+		<div class="logo container">
+			<a href="">Advocate</a>			
+			<span class="tagline">a theme for non-profits, charities, activists and political campaigns</span>
+		</div>
+	</section>
 	
 	<div class="page_wrapper">
 		<section class="container">
 			
-			<!-- Start Page Content -->
-			<div id="about" class="page with_sidebar">
+			<!-- Start Gallery -->
+			<div id="gallery" class="page with_sidebar">
 				
-				<h1>the Chapter</h1>
+				<h1>Gallery</h1>
 				
-				<div class="full">
-					<img src="images/content/nsa_women.JPG" alt="" class="rounded" />
-					<p class="larger">
-						<b>Welcome to the NSA Manhattan Chapter site </b> A theme designed to help non-profits give back to people, to their communities, to the environment and our planet.</p>
-					<p>Like all NSA Chapters, the driving force behind our chapter is to bring people who stutter together. There are 1.6 million people in Manhattan, so statistically speaking there are enough people in the borough who stutter to pretty much fill up all of Madison Square Garden...or Barclays Center if you prefer that arena. With the help of people like you and those who join the NSA stuttering community, we could really make an impact on spreading public awareness and forming a strong stuttering community. We truly have a unique opportunity here.</p>
-			
-				</div>
+				<!-- Start Gallery Filters -->
+				<ul class="filter_list">
+					<li class="current"><a href="javascript:;" class="all-items">All</a></li>
+					<li><a href="javascript:;" class="animals">Animals</a></li>
+					<li><a href="javascript:;" class="ocean">Ocean</a></li>
+					<li><a href="javascript:;" class="wildlife">Wildlife</a></li>
+					<li><a href="javascript:;" class="nature">Nature</a></li>
+				</ul>
+				<!-- End Gallery Filters -->
 				
-				<div id="programs">
-					<div class="box_heading">
-						<h2>Programs</h2>
-						<span class="line"></span>
-					</div>
-					<div class="one_third">
-						<img src="images/content/about-grow.jpg" alt="" />
-						<h4>Grow a Garden</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					<div class="one_third">
-						<img src="images/content/about-wildlife.jpg" alt="" />
-						<h4>Protect Wildlife</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					<div class="one_third column_last">
-						<img src="images/content/about-volunteer.jpg" alt="" />
-						<h4>Volunteer</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					
-				</div>				
-
+				<ul class="gallery_thumbnails two_column">
+					<li data-type="animals wildlife"><a href="images/content/gallery-large_1.jpg" class="fancybox" title="Photo 1"><img src="images/content/gallery-large_1.jpg" alt="Photo 1" /></a></li>
+					<li data-type="nature">
+						<a href="images/content/gallery-large_2.jpg" class="fancybox" title="Photo 2"><img src="images/content/gallery-large_2.jpg" alt="Photo 2" /></a>
+					</li>
+					<li data-type="ocean">
+						<a href="images/content/gallery-large_3.jpg" class="fancybox" title="Photo 3"><img src="images/content/gallery-large_3.jpg" alt="Photo 3" /></a>
+					</li>
+					<li data-type="ocean">
+						<a href="images/content/gallery-large_4.jpg" class="fancybox" title="Photo 4"><img src="images/content/gallery-large_4.jpg" alt="Photo 4" /></a>
+					</li>
+					<li data-type="nature wildlife animals">
+						<a href="images/content/gallery-large_5.jpg" class="fancybox" title="Photo 5"><img src="images/content/gallery-large_5.jpg" alt="Photo 5" /></a>
+					</li>
+					<li data-type="ocean">
+						<a href="images/content/gallery-large_6.jpg" class="fancybox" title="Photo 6"><img src="images/content/gallery-large_6.jpg" alt="Photo 6" /></a>
+					</li>
+				</ul>
+				
 			</div>
-			<!-- End Page Content -->
+			<!-- End Gallery -->
 			
 			<!-- Start Sidebar -->
 			<aside>
@@ -135,4 +141,4 @@
 		</section>
 	</div>
 	
-	<%= render "footer" %>
+	<%= render 'footer' %>

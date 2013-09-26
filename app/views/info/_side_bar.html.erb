@@ -1,49 +1,3 @@
-<%= render 'menu' %>
-
-<%= render 'logo_container' %>
-	
-	<div class="page_wrapper">
-		<section class="container">
-			
-			<!-- Start Page Content -->
-			<div id="about" class="page with_sidebar">
-				
-				<h1>the Chapter</h1>
-				
-				<div class="full">
-					<img src="images/content/nsa_women.JPG" alt="" class="rounded" />
-					<p class="larger">
-						<b>Welcome to the NSA Manhattan Chapter site </b> A theme designed to help non-profits give back to people, to their communities, to the environment and our planet.</p>
-					<p>Like all NSA Chapters, the driving force behind our chapter is to bring people who stutter together. There are 1.6 million people in Manhattan, so statistically speaking there are enough people in the borough who stutter to pretty much fill up all of Madison Square Garden...or Barclays Center if you prefer that arena. With the help of people like you and those who join the NSA stuttering community, we could really make an impact on spreading public awareness and forming a strong stuttering community. We truly have a unique opportunity here.</p>
-			
-				</div>
-				
-				<div id="programs">
-					<div class="box_heading">
-						<h2>Programs</h2>
-						<span class="line"></span>
-					</div>
-					<div class="one_third">
-						<img src="images/content/about-grow.jpg" alt="" />
-						<h4>Grow a Garden</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					<div class="one_third">
-						<img src="images/content/about-wildlife.jpg" alt="" />
-						<h4>Protect Wildlife</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					<div class="one_third column_last">
-						<img src="images/content/about-volunteer.jpg" alt="" />
-						<h4>Volunteer</h4>
-						<p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. sed.</p>
-					</div>
-					
-				</div>				
-
-			</div>
-			<!-- End Page Content -->
-			
 			<!-- Start Sidebar -->
 			<aside>
 				<div id="sidebar">
@@ -55,7 +9,19 @@
 								<input type="submit" value="Search" id="searchsubmit" class="button white">
 							</p>
 						</form>
-					</div>	
+					</div>
+					
+					<div class="widget">
+						<h5>Location</h5>
+						<div class="location_widget">
+							<%= render 'contact_info' %>
+							<p>
+								<span class="icon general">r</span> 123.333.4524 <br/>
+								<span class="icon general">h</span> <a href="">nsamidtown@gmail.com</a> <br/>
+								<span class="icon general">l</span> <a href="">www.nycstutters.com</a>
+							</p>
+						</div>
+					</div>
 						
 					<div class="widget">
 						<h5>Recent Posts</h5>
@@ -130,9 +96,4 @@
 						
 				</div>
 			</aside>
-			<!-- End Sidebar --> 
-			
-		</section>
-	</div>
-	
-	<%= render "footer" %>
+			<!-- End Sidebar -->

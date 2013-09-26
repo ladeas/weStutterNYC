@@ -5,11 +5,13 @@
 				<ul>
 					<li><%= link_to "home", root_path %></li>
 					<li><%= link_to "about", about_path %></li>
+					<li><%= link_to "recaps", recaps_path %></li>
+					<li><%= link_to "events", events_list_path %></li>
 
-					<li><%= link_to "blog", blog_path %></li>
-					<li><a href="events_list.html">events</a></li>
-					<li>
-						<a href="#">gallery</a>
+					<!-- <li><a href="events_list.html">events</a></li> -->
+					<li><%= link_to "gallery", gallery_2_columns_sidebar_path %>
+
+						<!-- <a href="#">gallery</a> -->
 						<ul>
 							<li><a href="gallery_2_columns.html">Gallery 2 Columns</a></li>
 							<li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
@@ -24,9 +26,18 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="donate.html">donate</a></li>
-					<li><%= link_to_unless_current "contact", contact_path %></li>
-					<li><a href="styles.html">styles</a></li>
+
+					<li><%= link_to "donate", donate_path %></li>
+
+					<li><%= link_to "contact", contact_path %></li>
+
+					<li><%= link_to "styles", styles_path %></li>
+
+					<li><%= link_to "thank you", thank_you_path %></li>
+
+					<li><a href="https://docs.google.com/forms/d/1FCpV6BH7vHvgsAG9jWVYxPrd7ZGZRqnB3gb5iQguIgk/viewform" class="button pink">Chapter Sign-In Form</a><li>
+
+
 				</ul>
 			</nav>
 			<!-- End Navigation -->
@@ -34,12 +45,19 @@
 			<!-- Start Social Icons -->
 			<aside>
 				<ul class="social icon">
-					<li><a href="" title="Twitter">a</a></li>
-					<li><a href="" title="Facebook">v</a></li>
-					<li><a href="" title="Flickr">d</a></li>
-					<li><a href="" title="Vimeo">c</a></li>
-					<li><a href="" title="Google">t</a></li>
-					<li><a href="" title="RSS">b</a></li>
+					<li><a href="https://twitter.com/westutter" class="twitter-follow-button" title="Twitter">a</a></li>
+					<li><a href="https://www.facebook.com/WeStutter" title="Facebook">v</a></li>
+
+					
+
+					<!-- i want twitter to open up a new window, like the line below does -->
+
+				
+
+					<!-- <li><a href="" title="Flickr">d</a></li> -->
+					<!-- <li><a href="" title="Vimeo">c</a></li> -->
+					<!-- <li><a href="" title="Google">t</a></li> -->
+					<!-- <li><a href="" title="RSS">b</a></li> -->
 					<!-- More Social Icons:
 					<li><a href="" title="Picasa">e</a></li>
 					<li><a href="" title="dribbble">f</a></li>

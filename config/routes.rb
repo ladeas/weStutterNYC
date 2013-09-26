@@ -4,20 +4,20 @@ WeStutterNYC::Application.routes.draw do
 
   get 'about', to: "info#about"
   get 'contact', to: "info#contact"
-  get 'blog', to: "info#blog"
+  get 'recaps', to: "info#recaps"
   get 'donate', to: "info#donate"
   get 'home', to: "info#home"
   get 'events_list', to: "info#events_list"
   get 'styles', to: "info#styles"
-  get 'licks/balls', to: "info#styles"
-
+  get 'gallery_2_columns_sidebar', to: "info#gallery_2_columns_sidebar"
+  get 'thank_you', to: "info#thank_you"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'info#home'
+    root 'info#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
