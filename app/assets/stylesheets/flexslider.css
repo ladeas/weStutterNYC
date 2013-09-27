@@ -47,7 +47,7 @@
 
 
 /* Clearfix for the .slides element */
-.slides: after {
+.slides:after {
     content: ".";
      display: block;
      clear: both;
