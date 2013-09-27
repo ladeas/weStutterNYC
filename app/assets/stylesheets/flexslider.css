@@ -8,10 +8,10 @@
  */
 
 /* Browser Resets */
-.flex-container a: active,
-.flexslider a: active,
-.flex-container a: focus,
-.flexslider a: focus {
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
     outline: none;
 }
 
