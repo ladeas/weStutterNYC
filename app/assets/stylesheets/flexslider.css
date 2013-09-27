@@ -175,7 +175,7 @@ html[xmlns] .slides {
 	*display: inline; /*REMOVE*/
 }
 
-.flex-control-nav li: first-child  {
+.flex-control-nav li:first-child  {
     margin: 0;
 }
 
@@ -188,7 +188,7 @@ html[xmlns] .slides {
 	text-indent: -999em;
 }
 
-.flex-control-nav li a: hover  {
+.flex-control-nav li a:hover  {
 	background-position: 0 -13px;
 }
 
