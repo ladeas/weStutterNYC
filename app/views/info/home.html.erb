@@ -6,6 +6,8 @@
 			<span class="tagline">if you stutter, you are not alone</span>
 		</div>
 	</section>
+
+	
 	
 	<!-- Start Home -->
 	<div id="home" class="page_wrapper">
@@ -21,30 +23,30 @@
 					<div id="slider" class="flexslider">
 						<ul class="slides">
 							<li>
-						      	<%= image_tag "nsa_women.JPG" %>
+						      	<%= image_tag "first_chapter_meeting.png" %>
 								<p class="flex-caption">
-									<b>This Panda does not stutter!</b> -It went to the conference this year in Scottsdale and went back to the Zoo afterwards and gave birth to 3 little cubs!
+									<b>Our first Meeting!</b> - On September 16th, 2013, we had our very first meeting and had a great turnout of 9 atendees, all people who stutter.
 								</p>
 						    </li>
 						    <li>
 						    	<%= image_tag "nsa_night.JPG" %>
 						      	<!-- <img src="images/content/barPic.jpg" alt="" /> -->
 								<p class="flex-caption">
-									<b>Protect Our Coral Reefs</b> - This slider is also responsive,  so your visitors see your site exactly as intended, no matter what device they're using.
+									<b>2013 NSA Conference</b> - Fireworks night on July 4th at the Westin Kierland Resort, Scottsdale, Arizona.
 								</p>								
 						    </li>
 							<li>
 								<%= image_tag "nsa_bar.png" %>
 						      	<!-- <img src="images/content/slide-3.jpg" alt="" /> -->
 								<p class="flex-caption">
-									<b>Plant a Tree</b> - Advocate theme features unlimited color options and Google fonts making it easy to customize to your unique purpose.
+									<b>Hanging out with friends</b> - One of the best things about our stuttering community - hanging with our friends from the NSA Brooklyn Chapter.
 								</p>
 						    </li>
 						    <li>
 						      	<!-- <img src="images/content/slide-4.jpg" alt="" /> --> <!-- this is the html for referencing image -->
 						      	<%= image_tag "nsa_banquet.JPG" %>
 								<p class="flex-caption">
-									<b>Save the Rainforest</b> - Bring awareness to your cause with style and function. 
+									<b>2013 NSA Conference</b> - Our friends from the Brooklyn and Queens NSA chapters at the Banquet Dinner at last year's NSA Conference.  
 								</p>
 						    </li>
 						  </ul>
@@ -57,55 +59,15 @@
 					<span class="line"></span>
 				</div>
 				<div id="revolution_wrap" class="full">
-					<div id="description" class="one_third">
 						<h3>Welcome to the Midtown Manhattan's NSA Chapter</h3>
 
-						<p>We're a support group for people who stutter.  Once a month we come together, hang out, relax and talk about all things stuttering-related. As a chapter of the NSA, our thinking is that one of the best ways to help ourselves is by getting support, advice and encouragement from other people who stutter.<p>
+						<p>We're a support group for people who stutter.  Once a month we come together, hang out, relax and talk about all things stuttering-related. As a chapter of the NSA, our thinking is that one of the best ways to help ourselves is by getting support from one another. This is a very special place for anyone who stutters, regardless of where you are on your journey, to come be part of a very safe and non-judgmental environment. We hope you join us. <p>
 
 						<!-- <p>Advocate is built with an impressive set of custom options that lets you change font styles, create <span class="color">unlimited colors</span> and is  almost entirely image free! We use font-based icons and CSS3 buttons to make your site retina sharp and fast loading.</p> -->
 						
-					</div>
 					
-					<!-- Start Actions -->
-					<div id="actions">
-						<div class="box one_half">
-							<div class="inner">
-								<div class="box_heading">
-									<span class="icon general-enclosed">2</span>
-									<h4>Come to a Meeting</h4>
-								</div>
-								<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
-							</div>
-						</div>
-						<div class="box one_half column_last">
-							<div class="inner">
-								<div class="box_heading">
-									<span class="icon general-enclosed">o</span>
-									<h4>Support Community</h4>
-								</div>
-								<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
-							</div>
-						</div>
-						<div class="box one_half">
-							<div class="inner">
-								<div class="box_heading">
-									<span class="icon general-enclosed">~</span>
-									<h4>Develop Strength</h4>
-								</div>
-								<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
-							</div>
-						</div>
-						<div class="box one_half column_last">
-							<div class="inner">
-								<div class="box_heading">
-									<span class="icon general-enclosed">l</span>
-									<h4>Conquer the World</h4>
-								</div>
-								<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
-							</div>
-						</div>
-					</div>
-					<!-- End Actions -->		
+					
+			
 				</div>
 				
 				
@@ -124,25 +86,19 @@
 				<div id="items">
 				
 					<!-- Start News -->
-					<div class="news one_third">
+					<div class="news two_thirds">
 						<div class="box_heading">
-							<h2>Recaps</h2>
+							<h2>Monthly Recaps</h2>
 							<span class="line"></span>
 						</div>
 						<ul>
+						<% Recap.all.limit(3).each do |recap| %>
 							<li>
-								<h5><a href="blog_single.html">Save The Whales</a></h5>
-								<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
+								<h5><a href="blog_single.html"><%= recap.title %></a></h5>
+								<p> <%= truncate(recap.body, length: 500, separator: ' ') { link_to '(read more)', recap} %> </p>
 							</li>
-							<li>
-								<h5><a href="blog_single.html">Vote Superman for President</a></h5>
-								<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
-							</li>
-							<li>
-								<h5><a href="blog_single.html">Protect Our Coral Reefs</a></h5>
-								<p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
-							</li>
-							
+
+							<% end %>
 						</ul>						
 					</div>
 					<!-- End News -->
@@ -150,60 +106,30 @@
 					<!-- Start Events -->
 					<div class="events one_third">
 						<div class="box_heading">
-							<h2>Events</h2>
+							<h2>Upcoming Events</h2>
 							<span class="line"></span>
 						</div>
 						<ul>	
+						<% Event.where(:start_datetime < :end_datetime).limit(3).each do |event| %>
+
 							<li>
-								<div class="date"><span>23</span> May</div>
+								<div class="date"><span><%=event.start_datetime.strftime("%e") %></span> <%=event.start_datetime.strftime("%b") %></div>
 								<div class="details">
 									<h5><a href="event_description.html">Our First Meeting</a></h5>
 									<p>7:30pm @ NSA Manhattan Office</p>
 								</div>
 							</li>
-							<li>
-								<div class="date"><span>22</span> May</div>
-								<div class="details">
-									<h5><a href="event_description.html">Green Energy Conference</a></h5>
-									<p>2pm @ Menlo Park</p>
-								</div>
-							</li>
-							<li>
-								<div class="date"><span>21</span> May</div>
-								<div class="details">
-									<h5><a href="event_description.html">Organic Pot Luck Night!</a></h5>
-									<p>6pm @ Santa clara University</p>
-								</div>
-							</li>
-							<li>
-								<div class="date"><span>18</span> May</div>
-								<div class="details">
-									<h5><a href="event_description.html">Beach Clean Up</a></h5>
-									<p>10am @ Venice Beach</p>
-								</div>
-							</li>
+
+							<% end %>
+
+							
 						</ul>
 					</div>
+
+
 					<!-- End Events -->
 					
-					<!-- Start Sponsors -->
-					<div id="sponsors" class="one_third column_last">
-						<div class="box_heading">
-							<h2>Our Sponsors</h2>
-							<span class="line"></span>
-						</div>
-						<ul>
-							<li><img src="images/content/sponsor-1.png" alt="Sponsor 1" /></li>
-							<li class="last"><img src="images/content/sponsor-2.png" alt="Sponsor 2" /></li>
-							<li><img src="images/content/sponsor-3.png" alt="Sponsor 3" /></li>
-							<li class="last"><img src="images/content/sponsor-4.png" alt="Sponsor 4" /></li>
-							<li><img src="images/content/sponsor-5.png" alt="Sponsor 5" /></li>
-							<li class="last"><img src="images/content/sponsor-6.png" alt="Sponsor 6" /></li>
-							<li class="bottom"><img src="images/content/sponsor-9.png" alt="Sponsor 9" /></li>
-							<li class="bottom last"><img src="images/content/sponsor-7.png" alt="Sponsor 7" /></li>
-						</ul>
-					</div>
-					<!-- End Sponsors -->
+					
 					
 				</div>
 				<!-- End Items -->

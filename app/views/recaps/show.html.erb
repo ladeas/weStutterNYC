@@ -1,0 +1,83 @@
+
+
+<!-- the above code will not be here when site is up -->
+
+
+<%= render "info/menu" %>
+
+<%= render 'info/logo_container' %>
+
+<div class="page_wrapper">
+		<section class="container">
+			
+			<!-- Start Page Content -->
+			<div id="blog" class="page">
+				
+				<h1> <%= @recap.title %> </h1>
+				
+				<!-- Start Blog Post -->
+				<div class="post">
+					<%= image_tag @recap.photo, class: "rounded" if @recap.photo %>
+					<!-- <h3> <%= @recap.title %>  </h3> -->
+					<div class="meta">
+						<span class="date"> <span class="icon general">i</span><%= @recap.created_at.strftime("%B %e, %Y")  %></span>
+						<!-- <span class="comments"><span class="icon social_misc">w</span> <a href="" title="">2 Comments</a></span>   -->
+						<span class="author"> <span class="icon social_misc">x</span> by <%= User.find(@recap.user_id).name %> </span>
+					</div>
+					<p><%= simple_format(@recap.body) %></p>
+					<p class="back_to_recaps"><%= link_to "back to recaps", recaps_path %> </p>
+				</div>
+				<!-- End Blog Post -->
+				
+				<!-- Start Comments -->
+				<!-- <div id="comments">
+					<h4>Comments</h4>
+
+					<ol>
+							<li id="comment-1">
+								<img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar avatar-60 photo avatar-default" height="60" width="60">		
+								<div class="comment">
+									<h5><a href="http://wordpress.org/" rel="external nofollow" class="url">Mr WordPress</a></h5>
+									<span class="date">June 17, 2012 at 8:53 pm</span>
+									<p>Hi, this is a comment.<br>To delete a comment, just log in and view the post's comments. There you will have the option to edit or delete them.</p>
+									<a class="comment-reply-link" href="">Reply</a>		
+								</div>
+							</li>
+					</ol>
+
+					<div id="respond">
+						<form action="http://themes.two2twelve.com/wordpress/advocate/wp-comments-post.php" method="post" id="commentform">
+							<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							
+							<p class="comment-form-author">
+								<label for="author">Name</label> <span class="required">*</span>
+								<input id="author" name="author" type="text" value="" size="30" aria-required="true">
+							</p>
+							<p class="comment-form-email">
+								<label for="email">Email</label> <span class="required">*</span>
+								<input id="email" name="email" type="text" value="" size="30" aria-required="true">
+							</p>
+							<p class="comment-form-url">
+								<label for="url">Website</label>
+								<input id="url" name="url" type="text" value="" size="30">
+							</p>
+							<p class="comment-form-comment">
+								<label for="comment">Comment</label>
+								<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+							</p>												
+							<p class="form-submit">
+								<input name="submit" type="submit" id="submit" value="Post Comment" class="button white">
+							</p>
+						</form>
+					</div>
+				</div> -->
+				<!-- End Comments -->
+				
+			</div>
+			<!-- End Page Content -->
+			
+			<%#= render "info/side_bar" %>
+		
+		</section>
+	</div>
+
+	<%= render "info/footer" %>

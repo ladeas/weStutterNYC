@@ -2,45 +2,64 @@
 		<div class="container">
 			<div class="widget one_fourth">
 				<h2 class="logo">#we stutter</h2>
-				<p>If you have any photos of you and your stutter buds, Instagram it and use the hashtag #westutter and eventually we're going to have these photos show up in our Instagram feed..or somewhere on the site. </p>
+				<p>Hashtag your Instagram photos with #westutter and they'll go on this site's Instagram feed. Let's help spread awareness! </p>
 			</div>
+
 			<div class="widget one_fourth">
-				<h5>NSA Twitter</h5>
-				
-				<div class="twitter_stream"></div>
+				<h5>Date & Time of Meetings</h5>
+				<p>Meetings are held on the 3rd Monday of each month from 7:00PM – 8:30PM. If you want to come a few minutes early and get situated, we'll be there hanging out . </p>
 				
 			</div>
 			<div class="widget one_fourth">
 				<h5>Newsletter</h5>
 													
-					<p>Signup to receive our monthly recaps.</p>
+					<p>Signup to receive our monthly recaps and upcoming events!</p>
+					
+					<!-- Begin MailChimp Signup Form -->
+					
+					<form action="http://nycstutters.us3.list-manage.com/subscribe/post?u=fc3246b3ad964c2e31007aa9a&amp;id=648f6d7e0b" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+											
+						<p>
+							<input type="email" placeholder="Email *" name="EMAIL" >
+						</p>
+						<p>
+							<input type="text" placeholder="Full Name *" name="FNAME" >
+						</p>
+						<p>
+							<input type="submit" value="Signup →" name="subscribe" id="mc-embedded-subscribe" class="button purple">
+						</p>
+					</form>
 
-				<%= form_for :user, :url => users_path(@user), :html => {:method => :post} do |f| %>
-				<% @user = User.new %>
-				<% if @user.errors.any? %>
+					<!--End mc_embed_signup-->
+
+					<!-- THIS IS THE USER SIGNUP FORM -->
+<!-- 				<%#= form_for :user, :url => users_path(@user), :html => {:method => :post} do |f| %>
+				<%# @user = User.new %>
+				<%# if @user.errors.any? %>
 				    <div id="error_explanation">
-				      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+				      <h2><%#= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
 				      <ul>
-				      <% @user.errors.full_messages.each do |msg| %>
-				        <li><%= msg %></li>
-				      <% end %> </ul>
+				      <%# @user.errors.full_messages.each do |msg| %>
+				        <li><%#= msg %></li>
+				      <%# end %> </ul>
 				    </div>
-				  <% end %>
+				  <%# end %>
 					<p>
-						<%= f.text_field :name, placeholder: 'Name *' %>
+						<%#= f.text_field :name, placeholder: 'Name *' %>
 					</p>
 					<p>
-						<%= f.email_field :email, placeholder: 'Email *' %>
+						<%#= f.email_field :email, placeholder: 'Email *' %>
 					</p>
 					
-					<%= f.submit 'Signup', class: "button white" %>
-				<% end %>
+					<%#= f.submit 'Signup', class: "button white" %>
+				<%# end %> -->
+				<!-- END USER SIGNUP FORM -->
 			</div>
 			<div class="widget one_fourth column_last">
 				<h5>Location</h5>
 				<div class="location_widget">
-					<%= render 'contact_info' %>
+					<%= render 'info/contact_info' %>
 					<p>
 						<span class="icon general">h</span> <a href="">nsamidtown@gmail.com</a> <br/>
 						<span class="icon general">l</span> <a href="">www.nycstutters.com</a>

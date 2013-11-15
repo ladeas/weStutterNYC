@@ -990,7 +990,7 @@ div#location div.map {
 	clear: both;
 	overflow: hidden;
 	float: left;
-	width: 438px;
+	width: 700px;
 	height: 194px;
 	padding: 5px;
 	background: #f4f3ed;
@@ -1400,6 +1400,11 @@ p.larger {
 	color: #666;
 }
 
+article.larger {
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
 a {
 	color: #d07837;
 	outline: none;
@@ -1461,11 +1466,13 @@ div.three_fourth, div.one_fourth, div.two_thirds {
 }
 
 div.one_half { 
-	width: 48%; 
+	width: 45%; 
+	/*was 48% */
 }
 
 div.one_third { 
-	width: 30.42%; 
+	/*width: 30.42%; */
+	width: 25%;
 }
 
 div.two_thirds { 
@@ -1516,9 +1523,9 @@ img.rounded {
 ---------------------------------------------*/
 .button {
 	border: 1px solid #DEDEDE;
-	-webkit-border-radius: 3px;
+/*	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border-radius: 3px;*/
 	color: #555555;
 	display: inline-block;
 	font: bold 10px/12px 'Helvetica Neue',Helvetica,sans-serif;
@@ -1610,6 +1617,17 @@ img.rounded {
 
 .button.orange a { 
 	color: #996633; 
+}
+
+.button.brown {
+	background: #d07837; /* Old browsers */
+	border-color: #d07837;
+	color: brown;
+	text-shadow: 0 1px 0 #d07837;
+}
+
+.button.brown a { 
+	color: #d07837; 
 }
 
 .button.green {

@@ -1,6 +1,6 @@
 			<!-- Start Sidebar -->
 			<aside>
-				<div id="sidebar">
+				<!-- <div id="sidebar">
 					<div class="widget widget_search" id="search-2">
 						<form action="http://themes.two2twelve.com/wordpress/advocate/" id="searchform" method="get">
 							<p>	
@@ -9,14 +9,14 @@
 								<input type="submit" value="Search" id="searchsubmit" class="button white">
 							</p>
 						</form>
-					</div>
+					</div> -->
 					
 					<div class="widget">
 						<h5>Location</h5>
 						<div class="location_widget">
-							<%= render 'contact_info' %>
+							<%= render 'info/contact_info' %>
 							<p>
-								<span class="icon general">r</span> 123.333.4524 <br/>
+								<!-- <span class="icon general">r</span> 123.333.4524 <br/> -->
 								<span class="icon general">h</span> <a href="">nsamidtown@gmail.com</a> <br/>
 								<span class="icon general">l</span> <a href="">www.nycstutters.com</a>
 							</p>
@@ -24,24 +24,16 @@
 					</div>
 						
 					<div class="widget">
-						<h5>Recent Posts</h5>
+						<h5>Recent Recaps</h5>
 						<div class="recent_posts">
 							<ul>
-								<li>
-									<a href="">Wildlife Protection</a>
-								</li>
-								<li>
-									<a href="">Give a little, Get a lot</a>
-								</li>
-								<li>
-									<a href="">Whale Watch</a>
-								</li>
-								<li>
-									<a href="">Save the Rain Forest</a>
-								</li>
-								<li>
-									<a href="">Organic Gardening 101</a>
-								</li>
+								
+								<ul>
+						<% Recap.all.limit(3).each do |recap| %>
+							<li>
+								<a href="blog_single.html"><%= recap.title %></a>
+							</li>
+							<% end %>
 							</ul>
 							
 						</div>
@@ -75,7 +67,7 @@
 						<h5>Gallery</h5>
 						<div class="gallery">
 							<ul>
-								<li><img src="images/content/gallery_thumb_1.jpg" alt="" /></li>
+								<li> <%= image_tag "nsa_carl herder.jpg" %> </li>
 								<li><img src="images/content/gallery_thumb_2.jpg" alt="" /></li>
 								<li><img src="images/content/gallery_thumb_3.jpg" alt="" /></li>
 								<li><img src="images/content/gallery_thumb_4.jpg" alt="" /></li>

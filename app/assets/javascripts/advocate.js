@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('ready page:load',function () {
 	
 	// Enable mobile drop down navigation
 	$("header nav ul:first").mobileMenu();

@@ -1,0 +1,46 @@
+
+
+<%= render "info/menu" %>
+
+<%= render 'info/logo_container' %>
+
+  
+  <div class="page_wrapper">
+    <section class="container">
+      
+      <!-- Start Page Content -->
+      <div id="blog" class="page">
+        
+        <h1>Monthly Recaps</h1>
+        <%= link_to 'New Recap', new_recap_path %>
+        <% @recaps.each do |recap| %>
+        <!-- Start Blog Post -->
+        <div class="post">
+          <%= image_tag recap.photo, class: "rounded", class:"smaller_recap_img" if recap.photo %>
+
+
+          <h3><%= link_to recap.title, recap %></h3> <p><%= link_to 'Edit Recap', edit_recap_path(recap) %></p>
+
+
+
+          <div class="meta">
+            <span class="date"> <span class="icon general">i</span><%= recap.created_at.strftime("%B %e, %Y") %></span>
+            <!-- <span class="comments"><span class="icon social_misc">w</span> <a href="" title="">2 Comments</a></span>   -->
+            <span class="author"> <span class="icon social_misc">x</span> <%= User.find(recap.user_id).name %></span>
+          </div>
+          <p> <%= truncate(recap.body, length: 500, separator: ' ') { link_to '(read more)', recap} %> </p>
+        </div>
+        <!-- End Blog Post -->
+        <% end %>
+       
+      </div>
+      <!-- End Page Content -->
+      
+      <!-- Start Sidebar -->
+     <%#= render "info/side_bar" %>
+      <!-- End Sidebar -->
+      
+</div>
+  <!-- End Blog -->
+  
+    <%= render "info/footer" %>

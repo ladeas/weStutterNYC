@@ -1,15 +1,17 @@
 WeStutterNYC::Application.routes.draw do
 
+  resources :events
+
+  resources :recaps
+
   resources :users
 
   get 'about', to: "info#about"
   get 'contact', to: "info#contact"
-  get 'recaps', to: "info#recaps"
-  get 'donate', to: "info#donate"
+  # get 'donate', to: "info#donate"
   get 'home', to: "info#home"
-  get 'events_list', to: "info#events_list"
   get 'styles', to: "info#styles"
-  get 'gallery_2_columns_sidebar', to: "info#gallery_2_columns_sidebar"
+  # get 'gallery_2_columns_sidebar', to: "info#gallery_2_columns_sidebar"
   get 'thank_you', to: "info#thank_you"
 
 

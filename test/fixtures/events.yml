@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_datetime: 2013-11-14 16:00:45
+  end_datetime: 2013-11-14 16:00:45
+  venue: MyString
+  address: MyString
+  cost: MyString
+  name: MyString
+  details: MyString
+  type: 
+
+two:
+  start_datetime: 2013-11-14 16:00:45
+  end_datetime: 2013-11-14 16:00:45
+  venue: MyString
+  address: MyString
+  cost: MyString
+  name: MyString
+  details: MyString
+  type: 

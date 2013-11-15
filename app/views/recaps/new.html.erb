@@ -1,0 +1,22 @@
+<%= render "info/menu" %>
+<%= render 'info/logo_container' %>
+
+
+<div class="page_wrapper">
+		<section class="container">
+			
+			<!-- Start Page Content -->
+			<div id="blog" class="page">
+				<h1>New recap</h1>
+
+
+
+				<%= render 'form' %>
+
+				<div class="actions">
+					<%= link_to 'Back', recaps_path, class: "button pink" %>
+				</div>
+			</div>
+		</section>
+
+<%= render "info/footer" %>

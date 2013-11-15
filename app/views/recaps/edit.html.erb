@@ -1,0 +1,18 @@
+<%= render "info/menu" %>
+<%= render 'info/logo_container' %>
+
+<div class="page_wrapper">
+		<section class="container">
+			
+			<!-- Start Page Content -->
+			<div id="blog" class="page">
+<h1>Edit recap</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @recap %> |
+<%= link_to 'Back', recaps_path %>
+			</div>
+		</section>
+
+<%= render "info/footer" %>

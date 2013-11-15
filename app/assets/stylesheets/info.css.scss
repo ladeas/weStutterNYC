@@ -1,3 +1,26 @@
 // Place all the styles related to the info controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.info_name {
+	font-family: 'Cabin'; 
+	font-weight: bold; 
+	font-size: 20px;
+	line-height: 20px;
+	color: black;
+}
+
+.leaders_photos {
+	float: left;
+	padding-right: 10px;
+}
+
+.info_bio {
+	font-size: 14px;
+	line-height: 20px;
+	color: #8c8c8c;
+}
+
+.back_to_recaps {
+	text-align:right
+}
