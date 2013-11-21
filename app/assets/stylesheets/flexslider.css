@@ -133,11 +133,11 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav li a  {
-    width: 52px;
+    width: 30px;
      height: 52px;
      margin: -13px 0 0;
      display: block;
-     background: url(theme/bg_direction_nav.png) no-repeat;
+     background: url(arrows.png) no-repeat;
      position: absolute;
      top: 50%;
      cursor: pointer;
@@ -145,7 +145,7 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav li .next  {
-    background-position: -52px 0;
+    background-position: -30px 0;
     right: -21px;
 }
 

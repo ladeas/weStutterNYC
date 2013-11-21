@@ -12,6 +12,11 @@
     </tr>
   </thead>
 
+
+  <%= link_to "All Users", :action => "index" %>
+
+ <%= link_to "Users awaiting approval", :action => "index", :approved => "false" %>
+
   <tbody>
     <% @users.each do |user| %>
       <tr>

@@ -1,0 +1,42 @@
+<%= render "info/menu" %>
+<%= render "info/logo_container" %>
+
+<div class="page_wrapper">
+    <section class="container">
+
+    <div id="blog" class="page for_registration">
+    <div class="sub_heading_registration">
+
+
+<h2>Sign in</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+  <div class="registration_textfield"><%#= f.label :email %>
+  <%= f.email_field :email, :autofocus => true, :placeholder=> "email" %></div>
+
+  <div class="registration_textfield"><%#= f.label :password %>
+  <%= f.password_field :password, :placeholder=> "password" %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%#= f.label :remember_me %></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+</div>
+</section>
+</div>
+
+
+<%= render "info/footer" %>
+
+
+
+
+
+

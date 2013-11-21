@@ -111,6 +111,15 @@ div.page_wrapper .with_sidebar {
 	float: left;
 }
 
+/*custom class*/
+div.page_wrapper .for_registration {
+	width: 250px;	
+	display: block; 
+	margin-left:auto; 
+	margin-right: auto
+}
+
+
 div.page_wrapper aside {
 	float: right;
 	width: 220px;
@@ -123,6 +132,14 @@ div.box_heading {
 	position: relative;
 	margin-bottom: 30px;
 }
+
+/* custom, for registration page */
+div.sub_heading_registration {
+	text-align: center;
+	position: relative;
+	
+}
+
 
 div.box_heading { 
 	text-align: left; 
@@ -486,7 +503,7 @@ div.events ul li {
 }
 
 div.events ul li .date {
-	width: 40px;
+	width: 40px; 
 	height: 33px;
 	padding-top: 7px;
 	background: #d07837;

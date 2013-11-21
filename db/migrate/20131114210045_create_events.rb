@@ -7,7 +7,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :address
       t.string :cost
       t.string :name
-      t.string :details
+      t.text :details # i changed this from string to text #
       t.string :type
 
       t.timestamps

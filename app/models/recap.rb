@@ -1,7 +1,10 @@
 class Recap < ActiveRecord::Base
-	default_scope order('created_at DESC')
+	mount_uploader :photo, ImageUploader
+
+	default_scope order('created_at ASC')
 
 	belongs_to :user
-	mount_uploader :photo, ImageUploader
+
+	validates_presence_of :user_id, :title, :body
 
 end

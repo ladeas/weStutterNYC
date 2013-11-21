@@ -13,19 +13,30 @@
 			<!-- Start Page Content -->
 			<div id="blog" class="page">
 				
+
 				<h1> <%= @recap.title %> </h1>
+				
+				<!-- I'm trying to use the following method .each so I can add the edit/destroy links here -->
+				<%= link_to 'Edit Recap', edit_recap_path(@recap) %> 
+				<%= link_to 'Delete Recap', @recap, method: :delete, data: { confirm: 'Are you sure?' } %> 
+				
+				
 				
 				<!-- Start Blog Post -->
 				<div class="post">
-					<%= image_tag @recap.photo, class: "rounded" if @recap.photo %>
+					
 					<!-- <h3> <%= @recap.title %>  </h3> -->
 					<div class="meta">
 						<span class="date"> <span class="icon general">i</span><%= @recap.created_at.strftime("%B %e, %Y")  %></span>
 						<!-- <span class="comments"><span class="icon social_misc">w</span> <a href="" title="">2 Comments</a></span>   -->
 						<span class="author"> <span class="icon social_misc">x</span> by <%= User.find(@recap.user_id).name %> </span>
+
 					</div>
-					<p><%= simple_format(@recap.body) %></p>
-					<p class="back_to_recaps"><%= link_to "back to recaps", recaps_path %> </p>
+					<%#= image_tag @recap.photo, class: "rounded recap_photos" if @recap.photo %>
+					<div class="managed_content">
+					<%= simple_format(@recap.body) %>
+					</div>
+					<p class="back_to_recaps"><%= link_to "back to all recaps", recaps_path %> </p>
 				</div>
 				<!-- End Blog Post -->
 				
@@ -81,3 +92,7 @@
 	</div>
 
 	<%= render "info/footer" %>
+
+
+
+

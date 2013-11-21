@@ -1,5 +1,11 @@
 WeStutterNYC::Application.routes.draw do
 
+  devise_for :users 
+
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+  end
+  
   resources :events
 
   resources :recaps
@@ -8,11 +14,13 @@ WeStutterNYC::Application.routes.draw do
 
   get 'about', to: "info#about"
   get 'contact', to: "info#contact"
-  # get 'donate', to: "info#donate"
+  get 'donate', to: "info#donate"
   get 'home', to: "info#home"
   get 'styles', to: "info#styles"
   # get 'gallery_2_columns_sidebar', to: "info#gallery_2_columns_sidebar"
   get 'thank_you', to: "info#thank_you"
+
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

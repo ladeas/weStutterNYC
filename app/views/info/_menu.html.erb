@@ -8,6 +8,8 @@
 					<li><%= link_to "recaps", recaps_path %></li>
 					<li><%= link_to "events", events_path %></li>
 
+
+
 					<!-- <li><a href="events_list.html">events</a></li> -->
 					<!-- <li><%#= link_to "gallery", gallery_2_columns_sidebar_path %> -->
 
@@ -31,9 +33,14 @@
 
 					<li><%= link_to "contact", contact_path %></li>
 
+					<% if user_signed_in? %>
+					<li><%= link_to "log out", destroy_user_session_path, method: :delete %></li>
+					<% end %> 
 
 
-					<li><a href="https://docs.google.com/forms/d/1FCpV6BH7vHvgsAG9jWVYxPrd7ZGZRqnB3gb5iQguIgk/viewform" class="button pink">Chapter Sign-In Form</a><li>
+					<% if current_page?(root_url) %>
+						<li><a href="https://docs.google.com/forms/d/1FCpV6BH7vHvgsAG9jWVYxPrd7ZGZRqnB3gb5iQguIgk/viewform" class="button pink">Meeting Sign-In Form</a><li>
+					<% end %>
 
 
 				</ul>

@@ -20,10 +20,12 @@
   <div class="field">
     <h4>Enter the body below</h4>
     <%= f.label :body %><br>
+    <%#= text_area_tag :editor, "", :class => "tinymce", :rows => 40, :cols => 120 %>
+    
     <%= f.text_area :body %>
   </div>
 
-  <div class="actions">
+  <div class="field">
     <%= f.file_field :photo %>
   </div>
 

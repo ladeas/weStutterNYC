@@ -16,6 +16,11 @@ group :production do
 end
 
 
+gem "cancan"
+
+gem 'devise'
+
+gem 'tinymce-rails', '~> 4.0.10'
 
 gem 'carrierwave'
 
@@ -56,3 +61,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Add pry for development
+gem 'pry', group: :development

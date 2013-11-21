@@ -7,8 +7,6 @@
 		</div>
 	</section>
 
-	
-	
 	<!-- Start Home -->
 	<div id="home" class="page_wrapper">
 		
@@ -23,31 +21,33 @@
 					<div id="slider" class="flexslider">
 						<ul class="slides">
 							<li>
-						      	<%= image_tag "first_chapter_meeting.png" %>
+						      	<%= image_tag "first_chapter_meeting.png", class: "slider_photos" %>
 								<p class="flex-caption">
 									<b>Our first Meeting!</b> - On September 16th, 2013, we had our very first meeting and had a great turnout of 9 atendees, all people who stutter.
 								</p>
 						    </li>
-						    <li>
-						    	<%= image_tag "nsa_night.JPG" %>
-						      	<!-- <img src="images/content/barPic.jpg" alt="" /> -->
-								<p class="flex-caption">
-									<b>2013 NSA Conference</b> - Fireworks night on July 4th at the Westin Kierland Resort, Scottsdale, Arizona.
-								</p>								
-						    </li>
+						   
 							<li>
-								<%= image_tag "nsa_bar.png" %>
+								<%= image_tag "nsa_isad_park.png" %>
 						      	<!-- <img src="images/content/slide-3.jpg" alt="" /> -->
 								<p class="flex-caption">
-									<b>Hanging out with friends</b> - One of the best things about our stuttering community - hanging with our friends from the NSA Brooklyn Chapter.
+									<b>Spreading Awareness at Central Park</b> - Here are some awesome NSA'ers from Chapters throughout the NYC community spreading awareness for International Stuttering Awareness Month, October.
 								</p>
 						    </li>
 						    <li>
 						      	<!-- <img src="images/content/slide-4.jpg" alt="" /> --> <!-- this is the html for referencing image -->
-						      	<%= image_tag "nsa_banquet.JPG" %>
+						      	<%= image_tag "nsa_second_meeting.png" %>
 								<p class="flex-caption">
-									<b>2013 NSA Conference</b> - Our friends from the Brooklyn and Queens NSA chapters at the Banquet Dinner at last year's NSA Conference.  
+									<b>Our Second Meeting</b> - We really look forward to having many more of these support groups and building a strong community of people who stutter in the NYC area.  
 								</p>
+						    </li>
+
+						     <li>
+						    	<%= image_tag "nsa_night.JPG" %>
+						      	<!-- <img src="images/content/barPic.jpg" alt="" /> -->
+								<p class="flex-caption">
+									<b>2013 NSA Conference</b> - NSA'ers from all over the country enjoying the fireworks on a perfect July 4th evening. Westin Kierland Resort, Scottsdale, Arizona.
+								</p>								
 						    </li>
 						  </ul>
 					</div>
@@ -94,8 +94,20 @@
 						<ul>
 						<% Recap.all.limit(3).each do |recap| %>
 							<li>
-								<h5><a href="blog_single.html"><%= recap.title %></a></h5>
-								<p> <%= truncate(recap.body, length: 500, separator: ' ') { link_to '(read more)', recap} %> </p>
+
+								<h5><a href="blog_single.html"> <%= link_to recap.title, recap %> </a></h5> 
+ 					<div class="post">
+								<div class="meta">
+            <!-- <span class="date"> <span class="icon general">i</span><%= recap.created_at.strftime("%B %e, %Y") %></span> -->
+            <!-- <span class="comments"><span class="icon social_misc">w</span> <a href="" title="">2 Comments</a></span>   -->
+            <!-- <span class="author"> <span class="icon social_misc">x</span> <%#= User.find(recap.user_id).name %></span> -->
+          </div>
+          </div>
+<!-- 								<p> <%= truncate(recap.body, length: 500, separator: ' ') { link_to '(read more)', recap} %> </p>
+ -->				<p> <%= raw truncate(recap.body, length: 500, separator: ' ') { link_to 'read more', recap} %> </p> 
+ 					<%#= simple_format truncate((h(recap.body) + link_to("read more", recap_path(recap))), length: 500, separator: ' ') %>
+
+
 							</li>
 
 							<% end %>
@@ -110,13 +122,14 @@
 							<span class="line"></span>
 						</div>
 						<ul>	
-						<% Event.where(:start_datetime < :end_datetime).limit(3).each do |event| %>
+						<% Event.where(:start_datetime < :end_datetime).limit(5).each do |event| %>
 
 							<li>
-								<div class="date"><span><%=event.start_datetime.strftime("%e") %></span> <%=event.start_datetime.strftime("%b") %></div>
+								<div class="date"><span><%=event.start_datetime.strftime("%e") %></span><br/> <%=event.start_datetime.strftime("%b") %></div>
 								<div class="details">
-									<h5><a href="event_description.html">Our First Meeting</a></h5>
-									<p>7:30pm @ NSA Manhattan Office</p>
+									<h5><a href="event_description.html"><%= link_to event.name, event %></a></h5>
+									<p><%=event.start_datetime.strftime("%l:%M %P")%> @ <%=event.venue %></p>
+									<!-- <p>7:30pm @ NSA Manhattan Office</p> -->
 								</div>
 							</li>
 

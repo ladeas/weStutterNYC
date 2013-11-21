@@ -1,44 +1,79 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Start datetime:</strong>
-  <%= @event.start_datetime %>
-</p>
+<%= render "info/menu" %>
 
-<p>
-  <strong>End datetime:</strong>
-  <%= @event.end_datetime %>
-</p>
+<%= render "info/logo_container" %>
+      
+      <!-- Start Social Icons -->
+      
+      <!-- End Social Icons -->
+ 
+  
+  <div class="page_wrapper">
+    <section class="container">
 
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
+      <!-- Start Event List -->
+      <div id="events" class="page">
+       
+        <h1> <%= @event.name %></h1>  
+        <!-- <a href="events_list.html">&laquo; Back To Events</a> -->
+        
 
-<p>
-  <strong>Cost:</strong>
-  <%= @event.cost %>
-</p>
+        
+        <!-- Start Event Item -->
+        <div class="event">
+          
+          <div class="event_date">
+            <ul class="one">
+              <li>Event:</li>
+              <li>Start:</li>
+              <li>End:</li>
+              <li>Cost:</li>
+              <li>Updated:</li>
+            </ul>
+            <ul class="two">
+              <li> <%= @event.name %></li>
+              
+              <li><%=@event.start_datetime.strftime("%l:%M %P")%> </li>
+              <li><%=@event.end_datetime.strftime("%l:%M %P")%></li>
+              <li><%= @event.cost %></li>
+              <li><%= @event.created_at.strftime("%B %e, %Y")  %></li>
+            </ul>
+            <ul class="three">
+              <li>Venue:</li>
+              <li>Address:</li>
+            </ul>
+            <ul class="four">
+              <li> <%= @event.venue %></li>
+              <li> <%= @event.address %></li>
+            </ul> 
+          </div>
+          <div>
+          <p> <%= @event.details %></p>
+          </div>
+          
+          <div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+        <%= image_tag @event.photo, class: "rounded recap_photos" if @event.photo %>          
+       </div>
+        <!-- End Event Item -->     
+      
+    <div>
+          <%= link_to "back to events", events_path %>
+          </div>
+    </section>
 
-<p>
-  <strong>Details:</strong>
-  <%= @event.details %>
-</p>
+  </div>  
 
-<p>
-  <strong>Type:</strong>
-  <%= @event.type %>
-</p>
+  <%= render "info/footer" %>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  
+
+  
+
+
+
+
+<!-- the above code will not be here when site is up -->
+
+

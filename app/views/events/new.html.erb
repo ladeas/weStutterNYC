@@ -1,5 +1,29 @@
-<h1>New event</h1>
+<%= render "info/menu" %>
+<%= render 'info/logo_container' %>
+
+<div class="page_wrapper">
+		<section class="container">
+			
+			<!-- Start Page Content -->
+			<div id="blog" class="page">
+
+			<h1>New event</h1>
 
 <%= render 'form' %>
+				<div class="actions">
+				<%= link_to 'Back', events_path, class: "button pink" %>
 
-<%= link_to 'Back', events_path %>
+			</div>
+</div>
+		</section>
+
+<%= render "info/footer" %>
+
+
+
+
+
+
+
+
+

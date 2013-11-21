@@ -7,7 +7,7 @@ $(document).on('ready page:load',function () {
 	$("#slider").flexslider({
 		animation: "slide",    
 		slideshow: true,     
-		slideshowSpeed: 7000, 
+		slideshowSpeed: 10000, 
 		animationDuration: 500,  
 		directionNav: true,  
 		controlNav: false, 
