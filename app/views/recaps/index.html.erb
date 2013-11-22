@@ -11,7 +11,7 @@
       <!-- Start Page Content -->
       <div id="blog" class="page">
       
-        <% if user_signed_in? %>
+        <% if is_admin? %>
         <p><%= link_to 'Add New Recap', new_recap_path %></p>
         <% end %>
 
@@ -27,7 +27,7 @@
         <div class="post">
 
 
-          <h3><%= link_to recap.title, recap %></h3>  <% if user_signed_in? %> <%= link_to 'Edit Recap', edit_recap_path(recap) %> <%= link_to 'Delete Recap', recap, method: :delete, data: { confirm: 'Are you sure?' } %> <% end %>
+          <h3><%= link_to recap.title, recap %></h3>  <% if is_admin? %> <%= link_to 'Edit Recap', edit_recap_path(recap) %> <%= link_to 'Delete Recap', recap, method: :delete, data: { confirm: 'Are you sure?' } %> <% end %>
 
 
 
