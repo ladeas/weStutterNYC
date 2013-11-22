@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def require_admin!
+    if !current_user.admin 
+      redirect_to root_path, alert: "You are not an admin!"
+    end
+  end
+
   def configure_devise_permitted_parameters
     registration_params = [:name, :email, :password, :password_confirmation]
 
