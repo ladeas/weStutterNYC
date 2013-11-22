@@ -1,5 +1,7 @@
 class RecapsController < ApplicationController
   before_action :set_recap, only: [:show, :edit, :update, :destroy]
+  before_filter :require_admin!, only: [:new, :edit, :destroy]
+  # i think what i did at the top is correct, i added new, and took out index. 
 
   # GET /recaps
   # GET /recaps.json
