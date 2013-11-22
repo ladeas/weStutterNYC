@@ -17,9 +17,10 @@
 				<h1> <%= @recap.title %> </h1>
 				
 				<!-- I'm trying to use the following method .each so I can add the edit/destroy links here -->
+				<% if is_admin? %>
 				<%= link_to 'Edit Recap', edit_recap_path(@recap) %> 
 				<%= link_to 'Delete Recap', @recap, method: :delete, data: { confirm: 'Are you sure?' } %> 
-				
+				<% end %>
 				
 				
 				<!-- Start Blog Post -->
