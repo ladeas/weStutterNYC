@@ -29,7 +29,7 @@
               <li>Start:</li>
               <li>End:</li>
               <li>Cost:</li>
-              <li>Updated:</li>
+              <li>Date:</li>
             </ul>
             <ul class="two">
               <li> <%= @event.name %></li>
@@ -37,10 +37,10 @@
               <li><%=@event.start_datetime.strftime("%l:%M %P")%> </li>
               <li><%=@event.end_datetime.strftime("%l:%M %P")%></li>
               <li><%= @event.cost %></li>
-              <li><%= @event.created_at.strftime("%B %e, %Y")  %></li>
+              <li><%= @event.start_datetime.strftime("%B %e, %Y")  %></li>
             </ul>
             <ul class="three">
-              <li>Venue:</li>
+              <li>Place:</li>
               <li>Address:</li>
             </ul>
             <ul class="four">
@@ -59,7 +59,7 @@
         <!-- End Event Item -->     
       
     <div>
-          <%= link_to "back to events", events_path %>
+          <%#= link_to "back to events", events_path %>
           </div>
     </section>
 
