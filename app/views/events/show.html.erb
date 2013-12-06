@@ -18,8 +18,6 @@
         <h1> <%= @event.name %></h1>  
         <!-- <a href="events_list.html">&laquo; Back To Events</a> -->
         
-
-        
         <!-- Start Event Item -->
         <div class="event">
           
@@ -48,22 +46,26 @@
               <li> <%= @event.address %></li>
             </ul> 
           </div>
+
           <div>
           <p> <%= @event.details %></p>
           </div>
           
           <div>
-
-        <%= image_tag @event.photo, class: "rounded recap_photos" if @event.photo %>          
+          </div>
+          <div>
+        <%= image_tag @event.photo, class: "rounded recap_photos" if @event.photo %>     
+          </div>     
        </div>
         <!-- End Event Item -->     
       
-    <div>
-          <%#= link_to "back to events", events_path %>
+         <div class= "post">
+          <p class ="back_to_recaps"><%= link_to "back to events", events_path %></p>
           </div>
-    </section>
 
   </div>  
+
+   </section>
 
   <%= render "info/footer" %>
 

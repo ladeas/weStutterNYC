@@ -45,8 +45,8 @@
               <li>Cost:</li>
             </ul>
             <ul class="right">
-              <li><%=event.start_datetime.strftime("%B %e, %Y %l:%M%P")%></li>
-              <li><%=event.end_datetime.strftime("%B %e, %Y %l:%M%P")%></li>
+              <li><%=event.start_datetime.strftime("%l:%M%P")%></li>
+              <li><%=event.end_datetime.strftime("%l:%M%P")%></li>
               <li><%=event.venue%></li>
               <li><%=event.address%></li>
               <li><%=event.cost%></li>
