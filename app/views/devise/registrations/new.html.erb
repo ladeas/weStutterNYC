@@ -18,11 +18,11 @@
   <%= f.email_field :email, :autofocus => true, :placeholder => "email" %> </div> 
 
   <div class="registration_textfield"><%#= f.label :password %>
-  <%=  f.password_field :password, :placeholder => "password" %> </div>
+  <%=  f.email_field :password, :placeholder => "password" %> </div>
 
 
   <div class="registration_textfield"><%#= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, :placeholder => "verify password" %></div>
+  <%= f.email_field :password_confirmation, :placeholder => "verify password" %></div>
 
   <div><%= f.submit "Sign up" %></div>
 
