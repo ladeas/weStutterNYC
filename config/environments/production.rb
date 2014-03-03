@@ -2,7 +2,7 @@ WeStutterNYC::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Enable fonts in the asset pipeline
-  config.assets.enabled = false
+  config.assets.enabled = true
   config.assets.paths << "#{Rails.root}/app/assets/fonts" 
 
   # Code is not reloaded between requests.
