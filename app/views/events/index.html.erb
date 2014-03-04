@@ -34,7 +34,7 @@
             <% if is_admin? %> <%= link_to 'Edit Event', edit_event_path(event) %> <%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %> 
             <% end %>
 
-            <p><%= simple_format(event.details) %></p>
+            <p><%= simple_format(@event.details) %></p>
           </div>
           <div class="event_date">
             <ul class="left">
