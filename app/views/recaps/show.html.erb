@@ -33,17 +33,38 @@
 						<span class="author"> <span class="icon social_misc">x</span> by <%= User.find(@recap.user_id).name %> </span>
 
 					</div>
+				
 					<%#= image_tag @recap.photo, class: "rounded recap_photos" if @recap.photo %>
 					<div class="managed_content">
 					<%= simple_format(@recap.body) %>
+
 					</div>
 					<p class="back_to_recaps"><%= link_to "back to all recaps", recaps_path %> </p>
 
+				</div>
 
 				</div>
 
+				<div class="fb-comments" data-href="<%= request.original_url %>" data-mobile="false" data-width="1000" data-numposts="5" data-colorscheme="light"></div>
+			
 
-				<!-- End Blog Post -->
+			
+			<!-- End Page Content -->
+			
+			<%#= render "info/side_bar" %>
+		
+		</section>
+	</div>
+
+	<%= render "info/footer" %>
+
+
+
+
+
+
+
+<!-- End Blog Post -->
 				
 				<!-- Start Comments -->
 				<!-- <div id="comments">
@@ -87,23 +108,6 @@
 					</div>
 				</div> -->
 				<!-- End Comments -->
-				
-			</div>
-
-
-				<div class="fb-comments" data-href="<%= request.original_url %>" data-mobile="false" data-width="1000" data-numposts="5" data-colorscheme="light"></div>
-			
-
-			
-			<!-- End Page Content -->
-			
-			<%#= render "info/side_bar" %>
-		
-		</section>
-	</div>
-
-	<%= render "info/footer" %>
-
 
 
 
