@@ -65,7 +65,7 @@ body ul {
 }
 
 section.page_heading {
-	background: #d07837;
+	background: #7BBEEB;
 	width: 100%;
 	height: 90px;
 }
@@ -96,6 +96,7 @@ section.page_heading .logo a {
 
 section.page_heading .logo .tagline {
 	/*font-family: 'Cabin';*/
+	font-family: 'Helvetica Neue', helvetica, sans-serif;
 	font-size: 15px;
 	color: #fff;
 	display: inline-block;
@@ -509,7 +510,7 @@ div.events ul li .date {
 	width: 40px; 
 	height: 33px;
 	padding-top: 7px;
-	background: #d07837;
+	background: #7BBEEB;
 	color: #fff;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -1363,7 +1364,7 @@ h1,h2,h3,h4,h5,h6 {
 h1,h2 { 
 	/*font-family: 'Pacifico'; */
 	font-family: 'Special Elite', cursive;
-	color: #d07837; 
+	color: #7BBEEB; 
 }
 
 h3,h4 { 
@@ -1427,7 +1428,7 @@ article.larger {
 }
 
 a {
-	color: #d07837;
+	color: #7BBEEB;
 	outline: none;
 }
 
@@ -1514,6 +1515,7 @@ div.full h1 {
 
 div.full h2,div.full h3 {
 	margin-bottom: 10px;
+	font-family: 'Helvetica Neue', helvetica, sans-serif;
 }
 
 div.full h4,div.full h5,div.full h6 { 
@@ -1641,14 +1643,14 @@ img.rounded {
 }
 
 .button.brown {
-	background: #d07837; /* Old browsers */
-	border-color: #d07837;
+	background: #7BBEEB; /* Old browsers */
+	border-color: #7BBEEB;
 	color: brown;
-	text-shadow: 0 1px 0 #d07837;
+	text-shadow: 0 1px 0 #7BBEEB;
 }
 
 .button.brown a { 
-	color: #d07837; 
+	color: #7BBEEB; 
 }
 
 .button.green {
@@ -1962,7 +1964,7 @@ iframe {
 	cursor: default; 
 	font-size: 18px; 
 	line-height: 1; 
-	color: #d07837; 
+	color: #7BBEEB; 
 }
 
 /* Icons General */
@@ -2098,7 +2100,7 @@ div#events a {
 	float: left;
 	/*margin-top: -62px;
 */	text-decoration: none;
-	color: #d07837;
+	color: #7BBEEB;
 }
 
 div#events div.event p {
