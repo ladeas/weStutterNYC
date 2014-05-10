@@ -82,7 +82,7 @@ section.page_heading .logo {
 }
 
 section.page_heading .logo a {
-	font-size: 40px;
+	font-size: 47px;
 	/*font-family: 'Pacifico';*/
 	font-family: 'Special Elite', cursive;
 	text-shadow: 0px 2px rgba(0,0,0,0.36);
@@ -90,14 +90,16 @@ section.page_heading .logo a {
 	text-decoration: none;
 	float: left;
 	margin-right: 25px;
+	margin-top: 21px;
+	text-align: center;
 }
 
 section.page_heading .logo .tagline {
-	font-family: 'Cabin';
+	/*font-family: 'Cabin';*/
 	font-size: 15px;
 	color: #fff;
 	display: inline-block;
-	margin-top: 32px;
+	margin-top: 39px;
 }
 
 /* Page Layouts */

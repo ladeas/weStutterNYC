@@ -43,6 +43,9 @@
 	}
 		
 	/* 3. Homepage */
+	section.page_heading .logo a {
+		font-size: 46px;
+	}
 
 	div#home div#slider img {
 		width: 100%;
@@ -349,7 +352,12 @@
 	/* 3. Homepage */
 
 	section.page_heading .logo .tagline {
-		margin-top: -9px;
+		margin-top: 5px;
+		margin-left: 45px;
+	}
+
+	section.page_heading .logo a {
+		font-size: 30px;
 	}
 
 	div#home .page {
