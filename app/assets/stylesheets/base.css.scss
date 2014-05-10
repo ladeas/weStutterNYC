@@ -83,7 +83,8 @@ section.page_heading .logo {
 
 section.page_heading .logo a {
 	font-size: 40px;
-	font-family: 'Pacifico';
+	/*font-family: 'Pacifico';*/
+	font-family: 'Special Elite', cursive;
 	text-shadow: 0px 2px rgba(0,0,0,0.36);
 	color: #fff;
 	text-decoration: none;
@@ -1358,7 +1359,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1,h2 { 
-	font-family: 'Pacifico'; 
+	/*font-family: 'Pacifico'; */
+	font-family: 'Special Elite', cursive;
 	color: #d07837; 
 }
 
@@ -2091,10 +2093,10 @@ div#events {
 }
 
 div#events a {
-	float: right;
+	float: left;
 	/*margin-top: -62px;
 */	text-decoration: none;
-	color: #000;
+	color: #d07837;
 }
 
 div#events div.event p {
